@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCode, FaAward, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaBriefcase, FaCode, FaAward, FaGithub, FaLinkedin, FaGraduationCap, FaDownload, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 const About = () => {
   const experiences = [
@@ -7,31 +7,35 @@ const About = () => {
       title: "Senior Developer",
       company: "Tech Solutions Inc.",
       period: "2020 - Present",
-      description: "Led development of multiple web applications, improving performance and user experience.",
-      achievements: [
-        "Increased application performance by 40%",
-        "Led a team of 5 developers",
-        "Implemented CI/CD pipeline"
-      ]
+      description: "Led development of multiple web applications, improving performance and user experience."
     },
     {
       title: "Full Stack Developer",
       company: "Digital Innovations",
       period: "2018 - 2020",
-      description: "Developed and maintained various web applications using modern technologies.",
-      achievements: [
-        "Developed 10+ client projects",
-        "Reduced bug reports by 60%",
-        "Mentored junior developers"
-      ]
+      description: "Developed and maintained various web applications using modern technologies."
+    }
+  ];
+
+  const education = [
+    {
+      degree: "Master of Computer Applications",
+      institution: "Your University Name",
+      period: "2015 - 2018",
+      description: "Specialized in Software Engineering and Web Technologies"
+    },
+    {
+      degree: "Bachelor of Computer Applications",
+      institution: "Your College Name",
+      period: "2012 - 2015",
+      description: "Foundation in Computer Science and Programming"
     }
   ];
 
   return (
-    <section id="about" className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,116 +47,138 @@ const About = () => {
           <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
         </motion.div>
 
-        {/* Profile Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-12"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* Profile Image */}
-            <div className="md:col-span-4 flex justify-center items-start">
-              <div className="relative">
-                <div className="w-48 h-48 rounded-2xl overflow-hidden">
-                  <img
-                    src="/your-profile-image.jpg"
-                    alt="Profile"
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute -bottom-3 -right-3 bg-indigo-500 text-white p-2 rounded-xl shadow-lg">
-                  <FaCode className="w-6 h-6" />
-                </div>
-              </div>
-            </div>
-
-            {/* Bio */}
-            <div className="md:col-span-8 space-y-6">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  Abhinish Tiwari
-                </h3>
-                <p className="text-lg text-indigo-600 dark:text-indigo-400">
-                  Full Stack Developer
-                </p>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Profile Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-4"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+              {/* Cover Image */}
+              <div className="h-32 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
               
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                Passionate Full Stack Developer with expertise in building modern web applications.
-                I specialize in creating responsive, user-friendly interfaces and robust backend systems.
-                With a strong foundation in both frontend and backend technologies, I bring ideas to life
-                through clean, efficient code.
-              </p>
+              {/* Profile Content */}
+              <div className="px-6 pb-6">
+                {/* Profile Image */}
+                <div className="relative -mt-16 mb-4">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg">
+                    <img
+                      src="../../public/logo.jpg"
+                      alt="Abhinish Tiwari"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
 
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="/path-to-cv.pdf" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  Download CV
-                </a>
-                <div className="flex gap-4">
-                  <a 
-                    href="https://github.com/yourusername" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-100 dark:bg-gray-700 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-                  >
-                    <FaGithub className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                  </a>
-                  <a 
-                    href="https://linkedin.com/in/yourusername" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-100 dark:bg-gray-700 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-                  >
-                    <FaLinkedin className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                  </a>
+                {/* Profile Info */}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    Abhinish Tiwari
+                  </h3>
+                  <p className="text-indigo-600 dark:text-indigo-400 mb-4">
+                    Full Stack Developer
+                  </p>
+                  
+                  {/* Location & Contact */}
+                  <div className="flex items-center justify-center gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <FaMapMarkerAlt className="text-indigo-500" />
+                      <span>Your Location</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaEnvelope className="text-indigo-500" />
+                      <span>abhinish990@gmail.com</span>
+                    </div>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                      <div className="text-2xl font-bold text-indigo-500">5+</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                      <div className="text-2xl font-bold text-indigo-500">20+</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+                    </div>
+                  </div>
+
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-4 mb-6">
+                    <a href="https://github.com/yourusername" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="bg-gray-100 dark:bg-gray-700 p-2 rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="bg-gray-100 dark:bg-gray-700 p-2 rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                      <FaLinkedin className="w-5 h-5" />
+                    </a>
+                  </div>
+
+                  {/* Download CV Button */}
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 
+                                   text-white rounded-lg flex items-center justify-center gap-2
+                                   hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
+                    <FaDownload />
+                    Download CV
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Experience Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3">
-            <FaBriefcase className="text-indigo-500" />
-            Professional Experience
-          </h3>
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-8 border-l-2 border-indigo-500"
-              >
-                <div className="absolute -left-2.5 top-0 w-5 h-5 bg-indigo-500 rounded-full ring-4 ring-white dark:ring-gray-800"></div>
-                <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6">
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
-                  <p className="text-indigo-500 dark:text-indigo-400 font-medium">{exp.company} • {exp.period}</p>
-                  <p className="text-gray-600 dark:text-gray-300 mt-3">{exp.description}</p>
-                  <ul className="mt-4 space-y-2">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="text-gray-600 dark:text-gray-300 flex items-center gap-3">
-                        <FaAward className="text-indigo-500 flex-shrink-0" />
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          {/* Experience and Education Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-8"
+          >
+            {/* Experience Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <FaBriefcase className="text-indigo-500" />
+                Experience
+              </h3>
+              <div className="space-y-6">
+                {experiences.map((exp, index) => (
+                  <div key={index} className="relative pl-8 pb-6 last:pb-0">
+                    <div className="absolute left-0 top-0 h-full w-0.5 bg-indigo-500"></div>
+                    <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{exp.title}</h4>
+                    <p className="text-indigo-500 dark:text-indigo-400">{exp.company} • {exp.period}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mt-2">{exp.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <FaGraduationCap className="text-indigo-500" />
+                Education
+              </h3>
+              <div className="space-y-6">
+                {education.map((edu, index) => (
+                  <div key={index} className="relative pl-8 pb-6 last:pb-0">
+                    <div className="absolute left-0 top-0 h-full w-0.5 bg-indigo-500"></div>
+                    <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{edu.degree}</h4>
+                    <p className="text-indigo-500 dark:text-indigo-400">{edu.institution} • {edu.period}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -160,4 +186,196 @@ const About = () => {
 
 export default About;
 
+//  {/* Skills Section */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.5, delay: 0.2 }}
+//           className="mt-8"
+//         >
+//           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+//             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Skills</h3>
+//             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//               {skills.map((skillGroup, index) => (
+//                 <div key={index}>
+//                   <h4 className="text-lg font-semibold text-indigo-500 mb-3">{skillGroup.category}</h4>
+//                   <div className="space-y-2">
+//                     {skillGroup.items.map((skill, skillIndex) => (
+//                       <div key={skillIndex} 
+//                            className="bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-2
+//                                     transform hover:scale-105 transition-transform duration-300">
+//                         {skill}
+//                       </div>
+//                     ))}
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </motion.div>
 
+
+// import { motion } from 'framer-motion';
+// import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+
+// const About = () => {
+//   const experiences = [
+//     {
+//       title: "Senior Developer",
+//       company: "Tech Solutions Inc.",
+//       period: "2020 - Present",
+//       description: "Led development of multiple web applications, improving performance and user experience."
+//     },
+//     {
+//       title: "Full Stack Developer",
+//       company: "Digital Innovations",
+//       period: "2018 - 2020",
+//       description: "Developed and maintained various web applications using modern technologies."
+//     }
+//   ];
+
+//   const education = [
+//     {
+//       degree: "Master of Computer Applications",
+//       institution: "Your University Name",
+//       period: "2015 - 2018",
+//       description: "Specialized in Software Engineering and Web Technologies"
+//     },
+//     {
+//       degree: "Bachelor of Computer Applications",
+//       institution: "Your College Name",
+//       period: "2012 - 2015",
+//       description: "Foundation in Computer Science and Programming"
+//     }
+//   ];
+
+//   const skills = [
+//     { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+//     { category: "Backend", items: ["Node.js", "Python", "Java", "SQL"] },
+//     { category: "Tools", items: ["Git", "Docker", "AWS", "Firebase"] },
+//   ];
+
+//   return (
+//     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <motion.div 
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.5 }}
+//           className="text-center mb-16"
+//         >
+//           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+//             About Me
+//           </h2>
+//           <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
+//         </motion.div>
+
+//         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+//           {/* Bio */}
+//           <motion.div
+//             initial={{ opacity: 0, x: -20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.5 }}
+//             className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+//           >
+//             <div className="flex flex-col items-center mb-6">
+//               <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-indigo-500">
+//                 <img
+//                   src="your-profile-image.jpg"
+//                   alt="Profile"
+//                   className="w-full h-full object-cover"
+//                 />
+//               </div>
+//               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Abhinish Tiwari</h3>
+//               <p className="text-indigo-600 dark:text-indigo-400">Full Stack Developer</p>
+//             </div>
+//             <p className="text-gray-600 dark:text-gray-300 text-center">
+//               Passionate Full Stack Developer with expertise in building modern web applications.
+//               Specialized in creating responsive, user-friendly interfaces and robust backend systems.
+//             </p>
+//           </motion.div>
+
+//           {/* Skills */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.5, delay: 0.2 }}
+//             className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+//           >
+//             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Skills</h3>
+//             <div className="space-y-6">
+//               {skills.map((skillGroup, index) => (
+//                 <div key={index}>
+//                   <h4 className="text-lg font-semibold text-indigo-500 mb-3">{skillGroup.category}</h4>
+//                   <div className="flex flex-wrap gap-2">
+//                     {skillGroup.items.map((skill, skillIndex) => (
+//                       <span
+//                         key={skillIndex}
+//                         className="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full
+//                                  text-sm text-gray-700 dark:text-gray-300
+//                                  hover:bg-indigo-500 hover:text-white
+//                                  transition-colors duration-300"
+//                       >
+//                         {skill}
+//                       </span>
+//                     ))}
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </motion.div>
+
+//           {/* Experience */}
+//           <motion.div
+//             initial={{ opacity: 0, x: 20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.5, delay: 0.4 }}
+//             className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+//           >
+//             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+//               <FaBriefcase className="text-indigo-500" />
+//               Experience
+//             </h3>
+//             <div className="space-y-6">
+//               {experiences.map((exp, index) => (
+//                 <div key={index} className="relative pl-6 pb-6 last:pb-0">
+//                   <div className="absolute left-0 top-0 h-full w-0.5 bg-indigo-500"></div>
+//                   <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-indigo-500"></div>
+//                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{exp.title}</h4>
+//                   <p className="text-indigo-500 dark:text-indigo-400">{exp.company} • {exp.period}</p>
+//                   <p className="text-gray-600 dark:text-gray-300 mt-2">{exp.description}</p>
+//                 </div>
+//               ))}
+//             </div>
+//           </motion.div>
+//         </div>
+
+//         {/* Education Section */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.5, delay: 0.6 }}
+//           className="mt-8 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+//         >
+//           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+//             <FaGraduationCap className="text-indigo-500" />
+//             Education
+//           </h3>
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//             {education.map((edu, index) => (
+//               <div key={index} className="relative pl-6">
+//                 <div className="absolute left-0 top-0 h-full w-0.5 bg-indigo-500"></div>
+//                 <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-indigo-500"></div>
+//                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{edu.degree}</h4>
+//                 <p className="text-indigo-500 dark:text-indigo-400">{edu.institution} • {edu.period}</p>
+//                 <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
