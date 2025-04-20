@@ -22,7 +22,7 @@ const SocialLinks = () => {
   )
 }
 
-const SocialLink = ({ name, url, icon: Icon, hoverColor }) => {
+const SocialLink = ({ name, url, icon: Icon, hoverColor, isShowTooltip = true }) => {
   return (
     <a
       href={url}
@@ -40,17 +40,19 @@ const SocialLink = ({ name, url, icon: Icon, hoverColor }) => {
       <div className="relative z-10">
         <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
       </div>
-      <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 
+      {isShowTooltip &&
+        <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 
                      bg-gray-800 text-white px-2 py-1 rounded-md text-xs sm:text-sm
                      opacity-0 group-hover:opacity-100 transition-all duration-300
                      whitespace-nowrap shadow-lg pointer-events-none">
-        {name}
-      </span>
+          {name}
+        </span>
+      }
     </a>
   )
 }
 
-export default SocialLinks
+export { SocialLinks, SocialLink };
 
 
 

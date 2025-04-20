@@ -1,4 +1,4 @@
-import { RedirectButton } from "../../common/Button";
+import { RedirectButton } from "../../common/buttons/Button";
 
 export default function ActionsButtons() {
   return (

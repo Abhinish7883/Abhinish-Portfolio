@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { NavLink, useLocation } from 'react-router-dom'
-import ResumeButton from '../shared/ResumeButton'
+import ResumeButton from '../../../common/resume-button/ResumeButton'
 
 const MobileNav = ({ isOpen, setIsOpen }) => {
   const location = useLocation()

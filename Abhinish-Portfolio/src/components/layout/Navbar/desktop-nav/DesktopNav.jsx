@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import ResumeButton from '../shared/ResumeButton'
+import ResumeButton from '../../../common/resume-button/ResumeButton'
 
 const navItems = [
   { title: 'Home', to: '/home' },

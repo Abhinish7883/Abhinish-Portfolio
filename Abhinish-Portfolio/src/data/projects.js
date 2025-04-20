@@ -1,22 +1,249 @@
-export const projects = [
+
+const projects = [
   {
-    id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with modern features',
-    image: '/images/projects/ecommerce.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-    liveUrl: 'https://project1.com',
-    githubUrl: 'https://github.com/username/project1'
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
   },
   {
-    id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management application',
-    image: '/images/projects/task-app.jpg',
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-    liveUrl: 'https://project2.com',
-    githubUrl: 'https://github.com/username/project2'
-  }
-]
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+    longDescription:
+      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
+    image: "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+    ],
+    liveLink: "https://your-project-url.com",
+    githubLink: "https://github.com/yourusername/project",
+    features: [
+      "User authentication and authorization",
+      "Product search and filtering",
+      "Shopping cart management",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order tracking",
+    ],
+    featured: true,
+  },
+  // ... other projects
+];
 
-export default projects
+export default projects;

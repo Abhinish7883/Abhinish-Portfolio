@@ -2,7 +2,7 @@ import ActionsButtons from "./action-buttons/ActionButtons";
 import BackgroundBlobs from "./background-blobs/BackgroundBlobs";
 import IntroSection from "./intro-section/IntroSection";
 import ProfileImage from "./profile-image/ProfileImage";
-import SocialLinks from "./social-links/SocialLinks";
+import {SocialLinks} from "../common/social-links/SocialLinks";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
     >
       <BackgroundBlobs />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
-        <div className="flex-1 text-left md:pr-12 animate-fadeIn">
+        <div className="flex-1 text-left md:pr-12 animate-fadeIn pb-6">
           <IntroSection />
           <ActionsButtons />
           <SocialLinks />

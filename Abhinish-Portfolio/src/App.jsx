@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ThemeProvider } from './context/ThemeContext'
 import Layout from './components/layout/Layout'
 import Home from "./components/home/Home";
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import About from './components/about/About';
+import Projects from './components/projects/Projects';
+import Skills from './components/skills/Skills';
+import Contact from './components/contact/Contact';
 
 const App = () => {
   return (

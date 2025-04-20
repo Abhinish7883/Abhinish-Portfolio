@@ -1,9 +1,10 @@
 const User = {
-  name: "Abhinish",
-  email: "abhinish@abc.com",
-  phoneNumber: "123456789",
-  address: "123 Main St, City, Country",
-  
+  name: "Abhinish Tiwari",
+  email: "abhinish@gmail.com",
+  phoneNumber: "7549590262",
+  address: "Patna, Bihar, India",
+  job: "Software Engineer",
+  desgnation: "Full Stack Developer",
 };
 
 export default User;

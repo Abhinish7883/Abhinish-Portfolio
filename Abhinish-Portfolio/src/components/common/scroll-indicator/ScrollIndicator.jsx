@@ -1,4 +1,4 @@
-import { RedirectButton } from "../Button";
+import { RedirectButton } from "../buttons/Button";
 
 const ScrollIndicator = () => {
   return (
