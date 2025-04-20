@@ -3,7 +3,6 @@ import BackgroundBlobs from "./background-blobs/BackgroundBlobs";
 import IntroSection from "./intro-section/IntroSection";
 import ProfileImage from "./profile-image/ProfileImage";
 import SocialLinks from "./social-links/SocialLinks";
-import ScrollIndicator from "../../components/common/scrollIndicator/ScrollIndicator";
 
 const Home = () => {
   return (
@@ -23,7 +22,6 @@ const Home = () => {
         </div>
         <ProfileImage />
       </div>
-      <ScrollIndicator />
     </section>
   );
 };
