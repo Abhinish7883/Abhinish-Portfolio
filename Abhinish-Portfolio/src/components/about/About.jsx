@@ -34,7 +34,7 @@ const About = () => {
                 <div className="relative -mt-16 mb-4">
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg">
                     <img
-                      src="../../public/logo.jpg"
+                      src="../../../public/logo.jpg"
                       alt="Abhinish Tiwari"
                       className="w-full h-full object-cover"
                     />
