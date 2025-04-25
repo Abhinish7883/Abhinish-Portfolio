@@ -1,9 +1,9 @@
 import emailjs from '@emailjs/browser';
 
 const EMAIL_CONFIG = {
-  SERVICE_ID: "service_9b6htgh", 
-  TEMPLATE_ID: "template_3al7eoe",
-  PUBLIC_KEY: "a-SMuzuTvSEsSfHwp",
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
 export const sendEmail = async (formData) => {
@@ -14,14 +14,10 @@ export const sendEmail = async (formData) => {
       formData,
       EMAIL_CONFIG.PUBLIC_KEY
     );
-
-    if (response.status === 200) {
-      return { success: true };
-    } else {
-      throw new Error('Failed to send email');
-    }
+    return { success: true, data: response };
   } catch (error) {
-    console.error('Email service error:', error);
-    throw error;
+    console.error('Email send failed:', error);
+    return { success: false, error: error.message };
   }
 };
+
