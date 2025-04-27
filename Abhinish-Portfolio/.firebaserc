@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "abhinish-tiwari-portfolio"
-  }
+    "production": "abhinish-tiwari",
+    "staging": "abhinish-tiwari-staging",
+    "dev": "abhinish-tiwari-dev"
+  },
+  "targets": {},
+  "etags": {}
 }

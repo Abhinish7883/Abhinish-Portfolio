@@ -5,13 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:prod": "vite build --mode production",
+    "build:staging": "vite build --mode staging",
+    "build:dev": "vite build --mode development",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "firebase:login": "firebase login",
     "firebase:init": "firebase init",
-    "firebase:deploy": "firebase deploy",
-    "deploy": "npm run build && firebase deploy"
+    "deploy:prod": "npm run build:prod && firebase use production && firebase deploy",
+    "deploy:staging": "npm run build:staging && firebase use staging && firebase deploy",
+    "deploy:dev": "npm run build:dev && firebase use dev && firebase deploy",
+    "deploy:all": "npm run build:prod && firebase use production && firebase deploy && npm run build:staging && firebase use staging && firebase deploy && npm run build:dev && firebase use dev && firebase deploy"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -36,5 +40,3 @@
     "vite": "^6.3.2"
   }
 }
-
-
