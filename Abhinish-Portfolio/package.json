@@ -18,15 +18,14 @@
     "deploy:all": "npm run build:prod && firebase use production && firebase deploy && npm run build:staging && firebase use staging && firebase deploy && npm run build:dev && firebase use dev && firebase deploy"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "framer-motion": "^12.7.4",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.12",
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.22.0",
-    "vite-plugin-compression": "^0.5.1"
+    "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^12.7.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -36,7 +35,8 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.0",
-    "terser": "^5.39.0",
-    "vite": "^6.3.2"
+    "vite": "^6.3.2",
+    "vite-plugin-compression": "^0.5.1"
   }
 }
+
