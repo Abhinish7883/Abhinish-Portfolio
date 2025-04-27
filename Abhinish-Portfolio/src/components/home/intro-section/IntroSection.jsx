@@ -1,12 +1,15 @@
+import ActionsButtons from "../action-buttons/ActionButtons";
+
 export default function IntroSection() {
   return (
     <div>
-      <h2
-        className="text-sm sm:text-base text-indigo-600 dark:text-indigo-400 font-semibold tracking-wide uppercase mb-4
-                             transform hover:scale-105 transition-transform duration-300 inline-block"
+      <span
+        className="inline-block px-4 py-2 mb-6 text-sm font-medium text-indigo-600 dark:text-indigo-400 
+                       bg-indigo-50 dark:bg-indigo-900/10 rounded-full w-fit
+                       transform hover:scale-105 transition-all duration-300"
       >
         Welcome to my portfolio
-      </h2>
+      </span>
 
       <h1
         className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6
@@ -26,7 +29,7 @@ export default function IntroSection() {
         className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8
                             animate-slideUp animation-delay-200"
       >
-        Full Stack Developer crafting elegant web solutions
+        Full Stack Developer & Software Engineer
       </p>
 
       <p
@@ -34,9 +37,9 @@ export default function IntroSection() {
                             animate-slideUp animation-delay-400
                             leading-relaxed"
       >
-        I specialize in building robust web applications using modern
-        technologies. Let's turn your ideas into reality.
+       I create high-impact, scalable web applications that drive results. From front-end finesse to back-end power, I turn complex challenges into exceptional digital experiences.
       </p>
+      <ActionsButtons />
     </div>
   );
-};
+}

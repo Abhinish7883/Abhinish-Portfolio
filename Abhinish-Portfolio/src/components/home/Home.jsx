@@ -11,13 +11,12 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center relative 
                                    bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50
                                    dark:from-gray-900 dark:via-gray-800 dark:to-gray-900
-                                   overflow-hidden"
+                                   overflow-hidden mt-[-2rem]"
     >
       <BackgroundBlobs />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="flex-1 text-left md:pr-12 animate-fadeIn pb-6">
           <IntroSection />
-          <ActionsButtons />
           <SocialLinks />
         </div>
         <ProfileImage />

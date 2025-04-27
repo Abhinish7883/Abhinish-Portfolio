@@ -3,7 +3,7 @@ function TimelineSection({ timeline }) {
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
         <timeline.icon className="text-indigo-500" />
-        {timeline?.title }
+        {timeline?.title}
       </h3>
       <div className="space-y-6">
         {timeline?.options?.map((option, index) => (
@@ -14,7 +14,10 @@ function TimelineSection({ timeline }) {
               {option.title}
             </h4>
             <p className="text-indigo-500 dark:text-indigo-400">
-              {option.subTitle} • {option.period}
+              <a href={option.subTitleLink} target="_blank" rel="noopener noreferrer">
+                {option.subTitle} 
+              </a>
+               • {option.period}
             </p>
             <p className="text-gray-600 dark:text-gray-300 mt-2">
               {option.description}

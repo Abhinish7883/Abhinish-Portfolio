@@ -5,7 +5,7 @@ const User = {
   address: "Patna, Bihar, India",
   job: "Software Engineer",
   desgnation: "Full Stack Developer",
-  locationLink: "https://www.google.com/maps/place/Patna,+Bihar,+India",
+  locationLink: "https://maps.app.goo.gl/BVhJaJwx4RZcJXwZA",
 };
 
 export default User;
