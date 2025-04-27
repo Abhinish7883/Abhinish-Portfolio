@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'transform-opacity': 'transform, opacity',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      transform: ['hover', 'focus'],
+      backfaceVisibility: ['hover', 'focus'],
+    },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [],
   darkMode: 'class',

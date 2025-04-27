@@ -1,20 +1,32 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import compression from 'vite-plugin-compression';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    compression()
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
   },
-  server: {
-    port: 3000,
-    open: true
-  },
   build: {
     outDir: 'dist',
-    sourcemap: true
-  }
-})
+    minify: 'esbuild',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+  server: {
+    port: 3000,
+  },
+});
+

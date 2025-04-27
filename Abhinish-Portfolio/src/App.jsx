@@ -6,24 +6,31 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Contact from './components/contact/Contact';
+import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './components/common/error-boundary/ErrorBoundary';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="" element={<Navigate to="/home" replace />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Navigate to="/home" replace />} />
-          </Routes>
-        </Layout>
-      </Router>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <Router>
+            <Layout>
+              <Routes>
+                <Route path="" element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Navigate to="/home" replace />} />
+              </Routes>
+            </Layout>
+          </Router>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </HelmetProvider>
+    
   )
 }
 
