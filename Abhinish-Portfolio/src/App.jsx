@@ -10,11 +10,16 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/common/error-boundary/ErrorBoundary';
 
 const App = () => {
+  const routerFutureFlags = {
+    v7_startTransition: true,
+    v7_relativeSplatPath: true
+  };
+
   return (
     <HelmetProvider>
       <ErrorBoundary>
         <ThemeProvider>
-          <Router>
+          <Router future={routerFutureFlags}>
             <Layout>
               <Routes>
                 <Route path="" element={<Navigate to="/home" replace />} />
@@ -30,7 +35,6 @@ const App = () => {
         </ThemeProvider>
       </ErrorBoundary>
     </HelmetProvider>
-    
   )
 }
 
