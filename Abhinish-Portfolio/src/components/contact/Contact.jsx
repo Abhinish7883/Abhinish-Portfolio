@@ -6,7 +6,7 @@ import {SocialLinks} from '../common/social-links/SocialLinks';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-12 bg-gray-50 dark:bg-gray-900">
+    <div className="py-20 bg-white dark:bg-gray-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <HeaderSection headerName="Get In Touch" />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -17,7 +17,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
