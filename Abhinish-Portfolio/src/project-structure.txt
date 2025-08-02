@@ -1,0 +1,95 @@
+src/
+├── assets/
+│   ├── images/
+│   │   ├── projects/
+│   │   ├── skills/
+│   │   └── profile/
+│   ├── icons/
+│   └── fonts/
+│
+├── components/
+│   ├── common/
+│   │   ├── Button.jsx
+│   │   ├── Card.jsx
+│   │   ├── Modal.jsx
+│   │   ├── Loading.jsx
+│   │   └── ErrorBoundary.jsx
+│   │
+│   ├── layout/
+│   │   ├── Navbar/
+│   │   │   ├── index.jsx
+│   │   │   ├── DesktopNav.jsx
+│   │   │   ├── MobileNav.jsx
+│   │   │   └── ThemeToggle.jsx
+│   │   ├── Footer/
+│   │   │   └── index.jsx
+│   │   └── Layout.jsx
+│   │
+│   ├── home/
+│   │   ├── Hero.jsx
+│   │   ├── FeaturedProjects.jsx
+│   │   └── CallToAction.jsx
+│   │
+│   ├── about/
+│   │   ├── Profile.jsx
+│   │   ├── Experience.jsx
+│   │   └── Education.jsx
+│   │
+│   ├── projects/
+│   │   ├── ProjectCard.jsx
+│   │   ├── ProjectModal.jsx
+│   │   ├── ProjectGrid.jsx
+│   │   └── ProjectFilter.jsx
+│   │
+│   ├── skills/
+│   │   ├── SkillCard.jsx
+│   │   ├── SkillCategory.jsx
+│   │   └── SkillProgress.jsx
+│   │
+│   └── contact/
+│       ├── ContactForm.jsx
+│       └── SocialLinks.jsx
+│
+├── hooks/
+│   ├── useTheme.js
+│   ├── useScrollPosition.js
+│   ├── useIntersectionObserver.js
+│   └── useForm.js
+│
+├── context/
+│   ├── ThemeContext.jsx
+│   └── ProjectContext.jsx
+│
+├── data/
+│   ├── projects.js
+│   ├── skills.js
+│   ├── experience.js
+│   └── social.js
+│
+├── utils/
+│   ├── animations.js
+│   ├── validation.js
+│   └── helpers.js
+│
+├── styles/
+│   ├── globals.css
+│   ├── animations.css
+│   └── variables.css
+│
+├── config/
+│   ├── constants.js
+│   └── routes.js
+│
+├── services/
+│   ├── api.js
+│   └── email.js
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── Skills.jsx
+│   └── Contact.jsx
+│
+├── App.jsx
+└── main.jsx
