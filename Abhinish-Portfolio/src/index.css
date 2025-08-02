@@ -11,6 +11,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 4rem;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -21,6 +27,8 @@ html, body {
 body {
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 #root {
@@ -41,6 +49,20 @@ button,
 .relative {
   position: relative;
   z-index: 1;
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
 
 .container {

@@ -1,6 +1,6 @@
 import { FaDownload } from 'react-icons/fa';
 import { RESUME_CONFIG } from '../../../constants/resume';
-import { handleDownload } from '../../../utils/file-dowmload';
+import { handleDownload } from '../../../utils/file-download';
 
 const getButtonStyle = (variant) => {
   const btnStyle = 'w-full flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-200';
