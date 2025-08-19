@@ -36,9 +36,8 @@ export default function IntroSection() {
         className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-6 max-w-3xl
                             animate-slideUp animation-delay-400
                             leading-relaxed"
-      >
-       {home.description}
-      </p>
+                            dangerouslySetInnerHTML={{ __html: home.description }}
+      ></p>
       <ActionsButtons />
     </div>
   );
