@@ -154,22 +154,36 @@ const projects = [
     featured: true,
   },
   {
-    title: "Agriculture Monitoring System using IoT and Automation",
+    title: "Smart Agriculture Monitoring System (IoT + Automation)",
     description:
-      "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+      "Built during Diploma; selected by Bihar Government. IoT sensors + automation to monitor soil, temperature, and automate irrigation with real-time alerts.",
     longDescription:
-      "This comprehensive e-commerce solution provides a seamless shopping experience with features including user authentication, product catalog management, shopping cart functionality, secure payment processing via Stripe, order management, and an admin dashboard for inventory control.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux", "Stripe"],
-    liveLink: "https://your-project-url.com",
-    githubLink: "https://github.com/yourusername/project",
+      "A smart IoT solution designed to modernize farming with real-time monitoring, automation, and wireless communication. Recognized by the Bihar Government for innovation in agriculture technology.",
+    svgIcon: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" fill="#000000" width="800px" height="800px" viewBox="0 0 100 100" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+      <g transform="matrix(0.414291,-1.18844e-18,-5.81819e-19,0.851092,0.193696,-0.495474)">
+          <g id="asphalt-gray">
+              <rect x="-0.468" y="0.582" width="241.376" height="117.496" style="fill:rgb(92,94,95);"/>
+          </g>
+      </g>
+    </svg>`,
+    technologies: [
+      "Embedded C/C++",
+      "IoT wireless protocols",
+      "GSM/GPRS",
+      "Arduino",
+      "Moisture Sensor",
+      "PIR Sensor",
+      "Temperature Sensor",
+      "Water Level Sensor",
+      "DC Motor",
+      "GPRS Module",
+    ],
+    githubLink: "https://github.com/Abhinish7883/SAMS",
     features: [
-      "User authentication and authorization",
-      "Product search and filtering",
-      "Shopping cart management",
-      "Secure payment processing",
-      "Admin dashboard",
-      "Order tracking",
+      "Real-time monitoring of soil moisture, temperature, and water levels",
+      "Automated irrigation using DC motor, triggered by sensor data",
+      "PIR sensor for intrusion detection (animals/humans)",
+      "Wireless communication with GPRS module for alerts",
     ],
     featured: true,
   },
